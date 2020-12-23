@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
     <link
       rel="stylesheet"
@@ -17,194 +18,196 @@
     </title>
   </head>
   <body>
-    <!-- Header contenant le logo, la barre de navigation permettant de revenir en arrière,
+    <div id="main_container">
+      <!-- Header contenant le logo, la barre de navigation permettant de revenir en arrière,
         une photo du plat de présentation du restaurant et une description avec le bouton 'j'aime' -->
-    <header>
-      <!-- Bouton de retour arrière -->
-      <a href="../index.html">
-        <button type="button"><i class="fas fa-arrow-left"></i></button
-      ></a>
-      <!-- Logo du site -->
-      <figure>
-        <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
-      </figure>
-      <!-- Photo du restaurant, description et bouton 'j'aime' -->
-      <figure>
-        <img
-          src="../images/restaurants/note_enchantee.jpg"
-          alt="Une assiette bien garnie de bouchées et légumes en sauce avec du poisson"
-        />
-        <figcaption>
-          <h2>la note enchantée</h2>
-          <!-- Bouton 'j'aime' à rajouter -->
-        </figcaption>
-      </figure>
-    </header>
-    <!-- Première section contenant les entrées -->
-    <section>
-      <!-- Titre -->
-      <h2>entrées</h2>
-      <!-- Chaque div représente une carte de plat -->
+      <header>
+        <!-- Bouton de retour arrière -->
+        <a href="../index.html">
+          <button type="button"><i class="fas fa-arrow-left"></i></button
+        ></a>
+        <!-- Logo du site -->
+        <figure>
+          <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
+        </figure>
+        <!-- Photo du restaurant, description et bouton 'j'aime' -->
+        <figure>
+          <img
+            src="../images/restaurants/note_enchantee.jpg"
+            alt="Une assiette bien garnie de bouchées et légumes en sauce avec du poisson"
+          />
+          <figcaption>
+            <h2>la note enchantée</h2>
+            <!-- Bouton 'j'aime' à rajouter -->
+          </figcaption>
+        </figure>
+      </header>
+      <!-- Première section contenant les entrées -->
+      <section>
+        <!-- Titre -->
+        <h2>entrées</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>ravioles de foie gras</h3>
+            <p>accompagnés de leur crème à la truffe</p>
+          </div>
+          <!-- Prix -->
+          <p>25€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>caviar osciètre</h3>
+            <p>sur blini à la farine de blé noire</p>
+          </div>
+          <!-- Prix -->
+          <p>35€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>homard et espuma de potiron</h3>
+            <p>mariné aux zests d'orange</p>
+          </div>
+          <!-- Prix -->
+          <p>20€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>foie gras de canard cuit entier</h3>
+            <p>confiture de figue et pain toasté</p>
+          </div>
+          <!-- Prix -->
+          <p>35€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Deuxième section contenant les plats -->
+      <section>
+        <!-- Titre -->
+        <h2>plats</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>noix de coquilles saint-jacques</h3>
+            <p>sur lit de purée de céleri-rave</p>
+          </div>
+          <!-- Prix -->
+          <p>40€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>langoustine poêlée</h3>
+            <p>purée de patate douce</p>
+          </div>
+          <!-- Prix -->
+          <p>35€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>mijoté de queue de boeuf</h3>
+            <p>et riz sauvage aux zests de citron</p>
+          </div>
+          <!-- Prix -->
+          <p>44€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Troisième section contenant les desserts -->
+      <section>
+        <!-- Titre -->
+        <h2>desserts</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>macaron noisette et chocolat</h3>
+            <p>glace au caramel brun et sel de guérande</p>
+          </div>
+          <!-- Prix -->
+          <p>18€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>baba au rhum revisité</h3>
+            <p>avec son coulis de citron</p>
+          </div>
+          <!-- Prix -->
+          <p>22€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>tarte au citron meringuée</h3>
+            <p>destructurée</p>
+          </div>
+          <!-- Prix -->
+          <p>23€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Bouton 'commander' -->
       <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>ravioles de foie gras</h3>
-          <p>accompagnés de leur crème à la truffe</p>
-        </div>
-        <!-- Prix -->
-        <p>25€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+        <button type="button">commander</button>
       </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>caviar osciètre</h3>
-          <p>sur blini à la farine de blé noire</p>
-        </div>
-        <!-- Prix -->
-        <p>35€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>homard et espuma de potiron</h3>
-          <p>mariné aux zests d'orange</p>
-        </div>
-        <!-- Prix -->
-        <p>20€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>foie gras de canard cuit entier</h3>
-          <p>confiture de figue et pain toasté</p>
-        </div>
-        <!-- Prix -->
-        <p>35€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Deuxième section contenant les plats -->
-    <section>
-      <!-- Titre -->
-      <h2>plats</h2>
-      <!-- Chaque div représente une carte de plat -->
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>noix de coquilles saint-jacques</h3>
-          <p>sur lit de purée de céleri-rave</p>
-        </div>
-        <!-- Prix -->
-        <p>40€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>langoustine poêlée</h3>
-          <p>purée de patate douce</p>
-        </div>
-        <!-- Prix -->
-        <p>35€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>mijoté de queue de boeuf</h3>
-          <p>et riz sauvage aux zests de citron</p>
-        </div>
-        <!-- Prix -->
-        <p>44€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Troisième section contenant les desserts -->
-    <section>
-      <!-- Titre -->
-      <h2>desserts</h2>
-      <!-- Chaque div représente une carte de plat -->
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>macaron noisette et chocolat</h3>
-          <p>glace au caramel brun et sel de guérande</p>
-        </div>
-        <!-- Prix -->
-        <p>18€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>baba au rhum revisité</h3>
-          <p>avec son coulis de citron</p>
-        </div>
-        <!-- Prix -->
-        <p>22€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>tarte au citron meringuée</h3>
-          <p>destructurée</p>
-        </div>
-        <!-- Prix -->
-        <p>23€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Bouton 'commander' -->
-    <div>
-      <button type="button">commander</button>
+      <!-- Footer contenant les liens de contact, légaux et de participation au site -->
+      <footer>
+        <!-- Logo du site -->
+        <figure>
+          <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
+        </figure>
+        <!-- Liste des éléments du footer -->
+        <ul>
+          <li>proposer un restaurant</li>
+          <li>devenir partenaire</li>
+          <li>mentions légales</li>
+          <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
+        </ul>
+      </footer>
     </div>
-    <!-- Footer contenant les liens de contact, légaux et de participation au site -->
-    <footer>
-      <!-- Logo du site -->
-      <figure>
-        <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
-      </figure>
-      <!-- Liste des éléments du footer -->
-      <ul>
-        <li>proposer un restaurant</li>
-        <li>devenir partenaire</li>
-        <li>mentions légales</li>
-        <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
-      </ul>
-    </footer>
   </body>
 </html>

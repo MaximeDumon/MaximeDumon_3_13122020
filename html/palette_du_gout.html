@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
     <link
       rel="stylesheet"
@@ -17,181 +18,183 @@
     </title>
   </head>
   <body>
-    <!-- Header contenant le logo, la barre de navigation permettant de revenir en arrière,
+    <div id="main_container">
+      <!-- Header contenant le logo, la barre de navigation permettant de revenir en arrière,
         une photo du plat de présentation du restaurant et une description avec le bouton 'j'aime' -->
-    <header>
-      <!-- Bouton de retour arrière -->
-      <a href="../index.html">
-        <button type="button"><i class="fas fa-arrow-left"></i></button
-      ></a>
-      <!-- Logo du site -->
-      <figure>
-        <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
-      </figure>
-      <!-- Photo du restaurant, description et bouton 'j'aime' -->
-      <figure>
-        <img
-          src="../images/restaurants/palette_du_gout.jpg"
-          alt="Une superbe assiette composée de saumon et d'une salade"
-        />
-        <figcaption>
-          <h2>la palette du goût</h2>
-          <!-- Bouton 'j'aime' à rajouter -->
-        </figcaption>
-      </figure>
-    </header>
-    <!-- Première section contenant les entrées -->
-    <section>
-      <!-- Titre -->
-      <h2>entrées</h2>
-      <!-- Chaque div représente une carte de plat -->
+      <header>
+        <!-- Bouton de retour arrière -->
+        <a href="../index.html">
+          <button type="button"><i class="fas fa-arrow-left"></i></button
+        ></a>
+        <!-- Logo du site -->
+        <figure>
+          <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
+        </figure>
+        <!-- Photo du restaurant, description et bouton 'j'aime' -->
+        <figure>
+          <img
+            src="../images/restaurants/palette_du_gout.jpg"
+            alt="Une superbe assiette composée de saumon et d'une salade"
+          />
+          <figcaption>
+            <h2>la palette du goût</h2>
+            <!-- Bouton 'j'aime' à rajouter -->
+          </figcaption>
+        </figure>
+      </header>
+      <!-- Première section contenant les entrées -->
+      <section>
+        <!-- Titre -->
+        <h2>entrées</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>fricassée d'escargot</h3>
+            <p>au piment d'espelette</p>
+          </div>
+          <!-- Prix -->
+          <p>25€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>foie gras de canard mi-cuit</h3>
+            <p>et ses copeaux de truffe noire</p>
+          </div>
+          <!-- Prix -->
+          <p>35€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>oeuf au plat</h3>
+            <p>assaisonné à la truffe sur lit de caviar</p>
+          </div>
+          <!-- Prix -->
+          <p>25€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Deuxième section contenant les plats -->
+      <section>
+        <!-- Titre -->
+        <h2>plats</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>filet de boeuf aux herbes</h3>
+            <p>accompagné de sa ribambelle de légumes</p>
+          </div>
+          <!-- Prix -->
+          <p>40€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>parmentier de queue de boeuf</h3>
+            <p>à la truffe noire sur sa purée de panais</p>
+          </div>
+          <!-- Prix -->
+          <p>35€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>filet de turbot</h3>
+            <p>aux agrumes</p>
+          </div>
+          <!-- Prix -->
+          <p>44€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Troisième section contenant les desserts -->
+      <section>
+        <!-- Titre -->
+        <h2>desserts</h2>
+        <!-- Chaque div représente une carte de plat -->
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>paris-brest</h3>
+            <p>revisité</p>
+          </div>
+          <!-- Prix -->
+          <p>18€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>macaron au chocolat d'exception</h3>
+            <p>et glace à la vanille de madagascar</p>
+          </div>
+          <!-- Prix -->
+          <p>22€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div>
+          <!-- Texte de la carte -->
+          <div>
+            <h3>mousse au chocolat</h3>
+            <p>au piment d'espelette et à la truffe noire</p>
+          </div>
+          <!-- Prix -->
+          <p>23€</p>
+          <!-- Coche animée -->
+          <div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Bouton 'commander' -->
       <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>fricassée d'escargot</h3>
-          <p>au piment d'espelette</p>
-        </div>
-        <!-- Prix -->
-        <p>25€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+        <button type="button">commander</button>
       </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>foie gras de canard mi-cuit</h3>
-          <p>et ses copeaux de truffe noire</p>
-        </div>
-        <!-- Prix -->
-        <p>35€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>oeuf au plat</h3>
-          <p>assaisonné à la truffe sur lit de caviar</p>
-        </div>
-        <!-- Prix -->
-        <p>25€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Deuxième section contenant les plats -->
-    <section>
-      <!-- Titre -->
-      <h2>plats</h2>
-      <!-- Chaque div représente une carte de plat -->
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>filet de boeuf aux herbes</h3>
-          <p>accompagné de sa ribambelle de légumes</p>
-        </div>
-        <!-- Prix -->
-        <p>40€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>parmentier de queue de boeuf</h3>
-          <p>à la truffe noire sur sa purée de panais</p>
-        </div>
-        <!-- Prix -->
-        <p>35€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>filet de turbot</h3>
-          <p>aux agrumes</p>
-        </div>
-        <!-- Prix -->
-        <p>44€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Troisième section contenant les desserts -->
-    <section>
-      <!-- Titre -->
-      <h2>desserts</h2>
-      <!-- Chaque div représente une carte de plat -->
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>paris-brest</h3>
-          <p>revisité</p>
-        </div>
-        <!-- Prix -->
-        <p>18€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>macaron au chocolat d'exception</h3>
-          <p>et glace à la vanille de madagascar</p>
-        </div>
-        <!-- Prix -->
-        <p>22€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <!-- Texte de la carte -->
-        <div>
-          <h3>mousse au chocolat</h3>
-          <p>au piment d'espelette et à la truffe noire</p>
-        </div>
-        <!-- Prix -->
-        <p>23€</p>
-        <!-- Coche animée -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Bouton 'commander' -->
-    <div>
-      <button type="button">commander</button>
+      <!-- Footer contenant les liens de contact, légaux et de participation au site -->
+      <footer>
+        <!-- Logo du site -->
+        <figure>
+          <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
+        </figure>
+        <!-- Liste des éléments du footer -->
+        <ul>
+          <li>proposer un restaurant</li>
+          <li>devenir partenaire</li>
+          <li>mentions légales</li>
+          <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
+        </ul>
+      </footer>
     </div>
-    <!-- Footer contenant les liens de contact, légaux et de participation au site -->
-    <footer>
-      <!-- Logo du site -->
-      <figure>
-        <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
-      </figure>
-      <!-- Liste des éléments du footer -->
-      <ul>
-        <li>proposer un restaurant</li>
-        <li>devenir partenaire</li>
-        <li>mentions légales</li>
-        <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
-      </ul>
-    </footer>
   </body>
 </html>
