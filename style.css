@@ -45,6 +45,7 @@ h3,
 p,
 li {
   font-family: "Roboto";
+  margin: 0;
 }
 .capitalize {
   text-transform: capitalize;
@@ -112,10 +113,15 @@ h1 {
 footer {
   width: 100%;
   background-color: #353535;
+  padding: 1.5em;
+}
+#logo_footer{
+  margin: 0;
 }
 footer > ul {
   list-style-type: none;
   color: white;
+  padding: 0;
 }
 footer > ul > li {
   display: flex;
