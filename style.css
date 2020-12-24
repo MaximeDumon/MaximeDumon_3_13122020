@@ -42,7 +42,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+li {
   font-family: "Roboto";
 }
 .capitalize {
@@ -106,6 +107,41 @@ h1 {
   color: white;
 }
 /* Fin des règles applicables aux headers et leurs composants */
+
+/* Règles applicables aux footers et leurs composants */
+footer {
+  width: 100%;
+  background-color: #353535;
+}
+footer > ul {
+  list-style-type: none;
+  color: white;
+}
+footer > ul > li {
+  display: flex;
+  padding: 0.2em 0;
+}
+#icone_restaurant,
+#icone_partenaire {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em 0 0;
+}
+#icone_partenaire > svg {
+  display: inline-block;
+  transform: rotate(-45deg);
+  font-size: small;
+}
+#contact {
+  text-decoration: none;
+}
+#contact:link,
+#contact:visited {
+  color: white;
+}
+/* Fin des règles applicables aux footers et leurs composants */
 
 /* Pour faciliter le développement en attendant de traiter les images */
 img {
