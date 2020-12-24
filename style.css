@@ -9,7 +9,7 @@
     format("truetype");
   src: url("/polices/Shrikland/shrikhand-regular-webfont.woff") format("woff");
 }
-/* Pour les textes */
+/* Pour les textes réguliers */
 @font-face {
   font-family: "Roboto";
   src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.eot")
@@ -19,10 +19,23 @@
     format("truetype");
   src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.woff") format("woff");
 }
+/* Pour les textes en gras */
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.svg") format("svg");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.ttf") format("truetype");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.woff") format("woff");
+}
 
 /* Règles générales qui s'appliquent dans tous le documents, les exceptions sont traitées spécifiquement dans les blocs suivants */
+body {
+  margin: 0;
+}
 #main_container {
-  max-width: 320px;
+  min-width: 320px;
   width: 100%;
   margin: auto;
 }
@@ -32,14 +45,66 @@ h3,
 p {
   font-family: "Roboto";
 }
-
-/* Règles applicables aux headers et leurs composants */
-header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.capitalize {
+  text-transform: capitalize;
 }
 
+/* Règles applicables aux headers et leurs composants */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+#logo_accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1em 0;
+  background-color: white;
+}
+#logo_accueil > img {
+  /* A modifier: si possible en jouant directement sur la taille de la police */
+  width: 165px;
+}
+#localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0;
+  text-transform: capitalize;
+  font-size: large;
+  background-color: #eaeaea;
+}
+#icone_localisation {
+  margin-right: 1em;
+}
+#localisation > P {
+  margin: 0.5em;
+}
+h1 {
+  margin: 0;
+  padding: 0.5em 1.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+#description {
+  margin: 0;
+  text-align: center;
+  font-size: large;
+}
+#bouton_explorer {
+  width: 220px;
+  height: 50px;
+  align-self: center;
+  margin: 1.5em 0;
+  border-radius: 2.5em;
+  border-style: none;
+  font-size: medium;
+  color: white;
+}
 /* Fin des règles applicables aux headers et leurs composants */
 
 /* Pour faciliter le développement en attendant de traiter les images */

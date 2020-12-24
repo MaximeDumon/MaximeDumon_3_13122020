@@ -22,7 +22,7 @@
       <!-- Header contenant le logo, la barre de localisation, la présentation du site et le bouton 'explorer nos restaurants' -->
       <header>
         <!-- Logo du site -->
-        <figure>
+        <figure id="logo_accueil">
           <img src="./images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
         </figure>
         <!-- Localisation -->
@@ -34,13 +34,18 @@
           <p>paris, belleville</p>
         </div>
         <!-- Titre principal -->
-        <h1>réservez le menu qui vous convient</h1>
+        <h1>
+          <span class="capitalize">réservez</span> le menu qui vous convient
+        </h1>
         <!-- Description du site -->
-        <p>
-          découvrez des restaurants d'exception, sélectionnés par nos soins.
+        <p id="description">
+          <span class="capitalize">découvrez</span> des restaurants d'exception,
+          sélectionnés par nos soins.
         </p>
         <!-- Bouton 'explorez nos restaurants' -->
-        <button type="button">explorer nos restaurants</button>
+        <button id="bouton_explorer" type="button">
+          <span class="capitalize">explorer</span> nos restaurants
+        </button>
       </header>
       <!-- Main composant contenant les deux sections 'fonctionnement' et 'restaurants' -->
       <main>
