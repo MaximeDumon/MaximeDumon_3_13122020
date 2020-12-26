@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
     <link
       rel="stylesheet"
@@ -197,15 +197,27 @@
       <!-- Footer contenant les liens de contact, légaux et de participation au site -->
       <footer>
         <!-- Logo du site -->
-        <figure>
+        <figure id="logo_footer">
           <img src="../images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
         </figure>
-        <!-- Liste des éléments du footer -->
+        <!-- Liste des éléments du footer, les icônes spécifiques sont ajoutés en via le code CSS -->
         <ul>
-          <li>proposer un restaurant</li>
-          <li>devenir partenaire</li>
-          <li>mentions légales</li>
-          <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
+          <li>
+            <div id="icone_restaurant"><i class="fas fa-utensils"></i></div>
+            <p><span class="capitalize">proposer</span> un restaurant</p>
+          </li>
+          <li>
+            <div id="icone_partenaire"><i class="fas fa-handshake"></i></div>
+            <p><span class="capitalize">devenir</span> partenaires</p>
+          </li>
+          <li>
+            <p><span class="capitalize">mentions</span> légales</p>
+          </li>
+          <li>
+            <a id="contact" href="mailto:contact@ohmyfood.com"
+              ><span class="capitalize">contact</span></a
+            >
+          </li>
         </ul>
       </footer>
     </div>
