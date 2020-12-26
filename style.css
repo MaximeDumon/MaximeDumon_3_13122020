@@ -12,6 +12,7 @@
 /* Pour les textes réguliers */
 @font-face {
   font-family: "Roboto";
+  font-weight: normal;
   src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.eot")
     format("embedded-opentype");
   src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.svg") format("svg");
@@ -29,13 +30,23 @@
   src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.ttf") format("truetype");
   src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.woff") format("woff");
 }
+/* Pour les textes plus fins */
+@font-face {
+  font-family: "Roboto";
+  font-weight: thin;
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.svg") format("svg");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.ttf") format("truetype");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.woff") format("woff");
+}
 
 /* Règles générales qui s'appliquent dans tous le documents, les exceptions sont traitées spécifiquement dans les blocs suivants */
 body {
   margin: 0;
 }
 #main_container {
-  max-width: 320px;
+  max-width: 375px;
   width: 100%;
   margin: auto;
 }
@@ -56,6 +67,8 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
   background-color: #f6f6f6;
 }
 #logo_accueil {
@@ -74,27 +87,27 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0.3em 0;
-  text-transform: capitalize;
-  font-size: large;
   background-color: #eaeaea;
+  box-shadow: 0 2px 2px #c7c7c7 inset;
 }
 #icone_localisation {
   margin-right: 1em;
 }
-#localisation > P {
+#localisation > p {
   margin: 0.5em;
+  font-weight: bolder;
+  text-transform: capitalize;
 }
 h1 {
-  margin: 0;
   padding: 0.5em 1.5em;
-  font-size: 1.5em;
-  font-weight: bold;
+  margin-top: 1em;
+  font-size: 1.6em;
+  line-height: 1.1em;
   text-align: center;
 }
 #description {
-  margin: 0;
   text-align: center;
-  font-size: large;
+  font-size: 1.1em;
 }
 #bouton_explorer {
   width: 220px;
@@ -105,6 +118,12 @@ h1 {
   border-style: none;
   font-size: medium;
   color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 2px 5px #c5c5c5;
+}
+#bouton_explorer:hover {
+  background: linear-gradient(#fd88dc, #9864d8);
+  box-shadow: 0 2px 10px #868686;
 }
 /* Fin des règles applicables aux headers et leurs composants */
 
