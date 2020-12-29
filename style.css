@@ -127,6 +127,109 @@ h1 {
 }
 /* Fin des règles applicables aux headers et leurs composants */
 
+/* Règles générales applicables aux sections fonctionnement et restaurants et leurs composants */
+#fonctionnement,
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+}
+#restaurants {
+  background-color: #f6f6f6;
+}
+#restaurants > a {
+  text-decoration: none;
+}
+#restaurants > a:link,
+#restaurants > a:visited {
+  color: black;
+}
+
+/* Fin des règles générales applicables aux sections fonctionnement et restaurants et leurs composants */
+
+/* Règles applicables à la première section 'Fonctionnement' et ses composants */
+#liste_fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+#liste_fonctionnement > li {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+  background-color: #f6f6f6;
+  border-radius: 1.5em;
+  box-shadow: 0 10px 10px #c5c5c59d;
+}
+#liste_fonctionnement > li:hover {
+  background-color: #f4edfe;
+}
+#liste_fonctionnement > li:hover .icone_etape,
+#liste_fonctionnement > li:hover .description_etape {
+  color: #9356dc;
+}
+.icone_etape {
+  margin: 0 1.5em 0 2em;
+}
+.description_etape {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+/* Fin des règles applicables à la première section 'Fonctionnement' et ses composants */
+
+/* Règles applicables à la première section 'Restaurants' et ses composants */
+#restaurants > a {
+  width: 100%;
+  display: flex;
+  margin: 1em 0;
+}
+.vignette_restaurant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.vignette_restaurant > img {
+  max-width: 100%;
+  max-height: 175px;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+}
+.label_nouveau {
+  width: 80px;
+  height: 30px;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #99e2d0;
+  font-weight: bold;
+  color: #388568;
+}
+.vignette_restaurant > figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: white;
+  border-radius: 0 0 1em 1em;
+}
+.bouton_like {
+  font-size: x-large;
+  color: white;
+  stroke: black;
+  stroke-width: 1em;
+}
+.bouton_like:hover {
+  color: #9356dc;
+  stroke: none;
+}
+/* Fin des règles applicables à la première section 'Restaurants' et ses composants */
+
 /* Règles applicables aux footers et leurs composants */
 footer {
   box-sizing: border-box;

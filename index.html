@@ -50,80 +50,83 @@
       <!-- Main composant contenant les deux sections 'fonctionnement' et 'restaurants' -->
       <main>
         <!-- Première section du main contenant le fonctionnement du site -->
-        <section>
+        <section id="fonctionnement">
           <!-- Titre -->
-          <h2>fonctionnement</h2>
+          <h2><span class="capitalize">fonctionnement</span></h2>
           <!-- Liste ordonnée pour structurer les différentes étapes -->
-          <ol>
+          <ol id="liste_fonctionnement">
             <!-- Carte explicative du fonctionnement, 1ère étape -->
             <li>
               <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <div class="icone_etape"></div>
               <!-- Description de l'étape 1 -->
-              <p>choisissez un restaurant</p>
+              <p class="description_etape"><span class="capitalize">choisissez</span> un restaurant</span></p>
             </li>
             <!-- Carte explicative du fonctionnement, 2ème étape -->
             <li>
-              <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <!-- Icône d'étape -->
+              <div class="icone_etape"><i class="fas fa-list-ul"></i></div>
               <!-- Description de l'étape 2 -->
-              <p>composez votre menu</p>
+              <p class="description_etape"><span class="capitalize">composez</span> votre menu</p>
             </li>
             <!-- Carte explicative du fonctionnement, 3ème étape -->
             <li>
-              <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <!-- Icône d'étape -->
+              <div class="icone_etape"><i class="fas fa-store"></i></div>
               <!-- Description de l'étape 3 -->
-              <p>dégustez au restaurant</p>
+              <p class="description_etape"><span class="capitalize"></span>dégustez</span> au restaurant</p>
             </li>
           </ol>
         </section>
         <!-- Deuxième section du main contenant la liste des restaurants disponibles -->
-        <section>
+        <section id="restaurants">
           <!-- Titre -->
-          <h2>restaurants</h2>
+          <h2><span class="capitalize">restaurants</h2></span>
           <!-- Carte du premier restaurant -->
           <a href="./html/palette_du_gout.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/palette_du_gout.jpg"
                 alt="Une superbe assiette composée de saumon et d'une salade"
               />
               <!-- Label nouveau -->
-              <p>nouveau</p>
+              <p class="label_nouveau">nouveau</p>
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>la palette du goût</h3>
-                  <p>ménilmontant</p>
+                  <h3><span class="capitalize">la</span> palette du goût</h3>
+                  <p class="capitalize">ménilmontant</p>
                 </div>
                 <!-- Bouton 'j'aime' -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du second restaurant -->
           <a href="./html/note_enchantee.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/note_enchantee.jpg"
                 alt="Une assiette bien garnie de bouchées et légumes en sauce avec du poisson"
               />
               <!-- Label nouveau -->
-              <p>nouveau</p>
+              <p class="label_nouveau">nouveau</p>
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>la note enchantée</h3>
-                  <p>charonne</p>
+                  <h3><span class="capitalize">la</span> note enchantée</h3>
+                  <p class="capitalize">charonne</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du troisième restaurant -->
           <a href="./html/a_la_française.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/a_la_française.jpg"
@@ -132,17 +135,17 @@
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>à la française</h3>
-                  <p>cité rouge</p>
+                  <h3><span class="capitalize">à</span> la française</h3>
+                  <p class="capitalize">cité rouge</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du quatrième restaurant -->
           <a href="./html/delice_des_sens.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/delice_des_sens.jpg"
@@ -151,11 +154,11 @@
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>le délice des sens</h3>
-                  <p>folie-méricourt</p>
+                  <h3><span class="capitalize">le</span> délice des sens</h3>
+                  <p class="capitalize">folie-méricourt</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
