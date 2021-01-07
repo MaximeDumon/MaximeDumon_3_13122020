@@ -71,7 +71,7 @@ header {
   margin-bottom: 2em;
   background-color: #f6f6f6;
 }
-#logo_accueil {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +79,7 @@ header {
   padding: 1em 0;
   background-color: white;
 }
-#logo_accueil > img {
+.logo > img {
   width: 165px;
 }
 #localisation {
@@ -109,7 +109,7 @@ h1 {
   text-align: center;
   font-size: 1.1em;
 }
-#bouton_explorer {
+.bouton_principal {
   width: 220px;
   height: 50px;
   align-self: center;
@@ -120,8 +120,9 @@ h1 {
   color: white;
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0 2px 5px #c5c5c5;
+  cursor: pointer;
 }
-#bouton_explorer:hover {
+.bouton_principal:hover {
   background: linear-gradient(#fd88dc, #9864d8);
   box-shadow: 0 2px 10px #868686;
 }
@@ -168,16 +169,30 @@ h1 {
 #liste_fonctionnement > li:hover {
   background-color: #f4edfe;
 }
-#liste_fonctionnement > li:hover .icone_etape,
-#liste_fonctionnement > li:hover .description_etape {
+#liste_fonctionnement > li:hover .icone_etape {
   color: #9356dc;
 }
+.numero_etape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9864d8;
+  font-weight: bold;
+  color: white;
+}
 .icone_etape {
-  margin: 0 1.5em 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  margin: 0;
 }
 .description_etape {
   text-align: center;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: large;
 }
 #premiere_etape::before {
@@ -290,10 +305,118 @@ footer > ul > li {
 }
 /* Fin des règles applicables aux footers et leurs composants */
 
-/* Pour faciliter le développement en attendant de traiter les images */
-img {
-  max-width: 250px;
+/* Section des règles spécifiques aux pages de menus */
+/* Header */
+.header_menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
+.entete_menu {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.fleche_retour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  font-size: larger;
+  color: black;
+}
+.entete_menu > figure {
+  margin: 0 2em;
+}
+.photo_restaurant {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+}
+.photo_restaurant > img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.photo_restaurant > figcaption {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  border-radius: 2em 2em 0 0;
+  position: absolute;
+  bottom: -30px;
+  background-color: #f6f6f6;
+}
+.titre_menu {
+  font-family: "Shrikland";
+  font-weight: bold;
+  font-style: italic;
+  font-size: xx-large;
+}
+.titre_menu + .bouton_like {
+  color: #f6f6f6;
+}
+/* Pourquoi ce n'est pas hérité de la première déclaration ? */
+.titre_menu + .bouton_like:hover {
+  color: #9356dc;
+  stroke: none;
+}
+/* Fin du header */
+
+/* Plats */
+.plats {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: #f6f6f6;
+}
+.container_titre {
+  min-height: 40px;
+  padding: 0.5em;
+}
+.titre_section {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: medium;
+}
+.trait_titre {
+  width: 40px;
+  min-height: 2px;
+  background-color: #99e2d0;
+}
+.plat {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 10px 10px #c5c5c59d;
+}
+.description_plat {
+  display: flex;
+  justify-content: space-between;
+}
+.texte_rognable {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coche {
+  visibility: hidden;
+}
+#bouton_commander {
+  width: 190px;
+  justify-self: center;
+}
+/* Fin des plats */
+
+/* Fin des règles spécifiques aux pages de menus */
 
 /* Règles spécifiques aux formats tablettes */
 @media all and (min-width: 768px) and (max-width: 1024px) {

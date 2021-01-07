@@ -22,7 +22,7 @@
       <!-- Header contenant le logo, la barre de localisation, la présentation du site et le bouton 'explorer nos restaurants' -->
       <header>
         <!-- Logo du site -->
-        <figure id="logo_accueil">
+        <figure class="logo">
           <img src="./images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
         </figure>
         <!-- Localisation -->
@@ -43,7 +43,7 @@
           sélectionnés par nos soins.
         </p>
         <!-- Bouton 'explorez nos restaurants' -->
-        <button id="bouton_explorer" type="button">
+        <button class="bouton_principal" type="button">
           <span class="capitalize">explorer</span> nos restaurants
         </button>
       </header>
@@ -57,6 +57,8 @@
           <ol id="liste_fonctionnement">
             <!-- Carte explicative du fonctionnement, 1ère étape -->
             <li>
+              <!-- Numéro de l'étape -->
+              <div class="numero_etape"><p>1</p></div>
               <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
               <div id="premiere_etape" class="icone_etape"></div>
               <!-- Description de l'étape 1 -->
@@ -66,6 +68,8 @@
             </li>
             <!-- Carte explicative du fonctionnement, 2ème étape -->
             <li>
+              <!-- Numéro de l'étape -->
+              <div class="numero_etape"><p>2</p></div>
               <!-- Icône d'étape -->
               <div class="icone_etape"><i class="fas fa-list-ul"></i></div>
               <!-- Description de l'étape 2 -->
@@ -75,6 +79,8 @@
             </li>
             <!-- Carte explicative du fonctionnement, 3ème étape -->
             <li>
+              <!-- Numéro de l'étape -->
+              <div class="numero_etape"><p>3</p></div>
               <!-- Icône d'étape -->
               <div class="icone_etape"><i class="fas fa-store"></i></div>
               <!-- Description de l'étape 3 -->
