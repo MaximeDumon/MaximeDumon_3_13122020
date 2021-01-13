@@ -18,14 +18,14 @@
     </title>
   </head>
   <body>
-    <div id="main_container">
+    <div id="main_container_menu">
       <!-- Header contenant le logo, la barre de navigation permettant de revenir en arrière,
         une photo du plat de présentation du restaurant et une description avec le bouton 'j'aime' -->
-      <header class="header_menu">
-        <div class="entete_menu">
+      <header id="header_menu">
+        <div id="entete_menu">
           <!-- Bouton de retour arrière -->
           <a id="bouton_retour" href="../index.html">
-            <div class="fleche_retour"><i class="fas fa-arrow-left"></i></div>
+            <div id="fleche_retour"><i class="fas fa-arrow-left"></i></div>
           </a>
           <!-- Logo du site -->
           <figure class="logo">
@@ -36,195 +36,191 @@
           </figure>
         </div>
         <!-- Photo du restaurant, description et bouton 'j'aime' -->
-        <figure class="photo_restaurant">
+        <figure id="photo_restaurant">
           <img
             src="../images/restaurants/palette_du_gout.jpg"
             alt="Une superbe assiette composée de saumon et d'une salade"
           />
           <figcaption>
-            <h2 class="titre_menu">
+            <h2 id="titre_menu">
               <span class="capitalize">la</span> palette du goût
             </h2>
             <!-- Bouton 'j'aime' -->
-            <div class="bouton_like"><i class="fas fa-heart"></i></div>
+            <div id="bouton_like"><i class="fas fa-heart"></i></div>
           </figcaption>
         </figure>
       </header>
-      <div class="plats">
-        <!-- Première section contenant les entrées -->
-        <section>
-          <!-- Titre -->
-          <div class="container_titre">
-            <h2 class="titre_section">entrées</h2>
-            <div class="trait_titre"></div>
+      <!-- Première section contenant les entrées -->
+      <section class="plats">
+        <!-- Titre -->
+        <div class="container_titre">
+          <h2 class="titre_section">entrées</h2>
+          <div class="trait_titre"></div>
+        </div>
+        <!-- Chaque div représente une carte de plat -->
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">fricassée</span> d'escargot</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">au</span> piment d'espelette
+            </p>
+            <!-- Prix -->
+            <p>25€</p>
           </div>
-          <!-- Chaque div représente une carte de plat -->
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">fricassée</span> d'escargot</h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">au</span> piment d'espelette
-              </p>
-              <!-- Prix -->
-              <p>25€</p>
-            </div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">foie</span> gras de canard mi-cuit</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">et</span> ses copeaux de truffe noire
+            </p>
+            <!-- Prix -->
+            <p>35€</p>
           </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">oeuf</span> au plat</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">assaisonné</span> à la truffe sur lit de
+              caviar
+            </p>
+            <!-- Prix -->
+            <p>25€</p>
           </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">foie</span> gras de canard mi-cuit</h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">et</span> ses copeaux de truffe noire
-              </p>
-              <!-- Prix -->
-              <p>35€</p>
-            </div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+      </section>
+      <!-- Deuxième section contenant les plats -->
+      <section class="plats">
+        <!-- Titre -->
+        <div class="container_titre">
+          <h2 class="titre_section">plats</h2>
+          <div class="trait_titre"></div>
+        </div>
+        <!-- Chaque div représente une carte de plat -->
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">filet</span> de boeuf aux herbes</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">accompagné</span> de sa ribambelle de
+              légumes
+            </p>
+            <!-- Prix -->
+            <p>40€</p>
           </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">parmentier</span> de queue de boeuf</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">à</span> la truffe noire sur sa purée de
+              panais
+            </p>
+            <!-- Prix -->
+            <p>35€</p>
           </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">oeuf</span> au plat</h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">assaisonné</span> à la truffe sur lit
-                de caviar
-              </p>
-              <!-- Prix -->
-              <p>25€</p>
-            </div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">filet</span> de turbot</h3>
+          <div class="description_plat">
+            <p class="texte_rognable">
+              <span class="capitalize">aux</span> agrumes
+            </p>
+            <!-- Prix -->
+            <p>44€</p>
           </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+      </section>
+      <!-- Troisième section contenant les desserts -->
+      <section class="plats">
+        <!-- Titre -->
+        <div class="container_titre">
+          <h2 class="titre_section">desserts</h2>
+          <div class="trait_titre"></div>
+        </div>
+        <!-- Chaque div représente une carte de plat -->
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3 class="capitalize">paris-brest</h3>
+          <div class="description_plat">
+            <p class="capitalize">revisité</p>
+            <!-- Prix -->
+            <p>18€</p>
           </div>
-        </section>
-        <!-- Deuxième section contenant les plats -->
-        <section>
-          <!-- Titre -->
-          <div class="container_titre">
-            <h2 class="titre_section">plats</h2>
-            <div class="trait_titre"></div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3>
+            <span class="capitalize">macaron</span> au chocolat d'exception
+          </h3>
+          <div class="description_plat">
+            <p>
+              <span class="capitalize">et</span> glace à la vanille de
+              <span class="capitalize">madagascar</span>
+            </p>
+            <!-- Prix -->
+            <p>22€</p>
           </div>
-          <!-- Chaque div représente une carte de plat -->
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">filet</span> de boeuf aux herbes</h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">accompagné</span> de sa ribambelle de
-                légumes
-              </p>
-              <!-- Prix -->
-              <p>40€</p>
-            </div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="plat">
+          <!-- Texte de la carte -->
+          <h3><span class="capitalize">mousse</span> au chocolat</h3>
+          <div class="description_plat">
+            <p>
+              <span class="capitalize">au</span> piment d'espelette et à la
+              truffe noire
+            </p>
+            <!-- Prix -->
+            <p>23€</p>
           </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3>
-              <span class="capitalize">parmentier</span> de queue de boeuf
-            </h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">à</span> la truffe noire sur sa purée
-                de panais
-              </p>
-              <!-- Prix -->
-              <p>35€</p>
-            </div>
-          </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">filet</span> de turbot</h3>
-            <div class="description_plat">
-              <p class="texte_rognable">
-                <span class="capitalize">aux</span> agrumes
-              </p>
-              <!-- Prix -->
-              <p>44€</p>
-            </div>
-          </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </section>
-        <!-- Troisième section contenant les desserts -->
-        <section>
-          <!-- Titre -->
-          <div class="container_titre">
-            <h2 class="titre_section">desserts</h2>
-            <div class="trait_titre"></div>
-          </div>
-          <!-- Chaque div représente une carte de plat -->
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3 class="capitalize">paris-brest</h3>
-            <div class="description_plat">
-              <p class="capitalize">revisité</p>
-              <!-- Prix -->
-              <p>18€</p>
-            </div>
-          </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3>
-              <span class="capitalize">macaron</span> au chocolat d'exception
-            </h3>
-            <div class="description_plat">
-              <p>
-                <span class="capitalize">et</span> glace à la vanille de
-                <span class="capitalize">madagascar</span>
-              </p>
-              <!-- Prix -->
-              <p>22€</p>
-            </div>
-          </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="plat">
-            <!-- Texte de la carte -->
-            <h3><span class="capitalize">mousse</span> au chocolat</h3>
-            <div class="description_plat">
-              <p>
-                <span class="capitalize">au</span> piment d'espelette et à la
-                truffe noire
-              </p>
-              <!-- Prix -->
-              <p>23€</p>
-            </div>
-          </div>
-          <!-- Coche animée -->
-          <div class="coche">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </section>
-        <!-- Bouton 'commander' -->
-        <button id="bouton_commander" class="bouton_principal" type="button">
-          <span class="capitalize">commander</span>
-        </button>
-      </div>
+        </div>
+        <!-- Coche animée -->
+        <div class="coche">
+          <i class="fas fa-check-circle"></i>
+        </div>
+      </section>
+      <!-- Bouton 'commander' -->
+      <button id="bouton_commander" class="bouton_principal" type="button">
+        <span class="capitalize">commander</span>
+      </button>
       <!-- Footer contenant les liens de contact, légaux et de participation au site -->
       <footer>
         <!-- Logo du site -->

@@ -46,7 +46,6 @@ body {
   margin: 0;
 }
 #main_container {
-  max-width: 375px;
   width: 100%;
   margin: auto;
 }
@@ -67,11 +66,12 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 2em;
+  padding: 0.3em 0 2em;
   margin-bottom: 2em;
   background-color: #f6f6f6;
 }
 .logo {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +108,7 @@ h1 {
 #description {
   text-align: center;
   font-size: 1.1em;
+  padding: 0.5em;
 }
 .bouton_principal {
   width: 220px;
@@ -131,6 +132,7 @@ h1 {
 /* Règles générales applicables aux sections fonctionnement et restaurants et leurs composants */
 #fonctionnement,
 #restaurants {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 1.5em;
@@ -161,10 +163,12 @@ h1 {
   height: 75px;
   display: flex;
   align-items: center;
-  margin: 1em 0;
+  margin: 1em 10px 1em 0;
   background-color: #f6f6f6;
   border-radius: 1.5em;
   box-shadow: 0 10px 10px #c5c5c59d;
+  position: relative;
+  left: 10px;
 }
 #liste_fonctionnement > li:hover {
   background-color: #f4edfe;
@@ -180,20 +184,22 @@ h1 {
   height: 25px;
   border-radius: 50%;
   background-color: #9864d8;
-  font-weight: bold;
+  font-weight: bolder;
   color: white;
+  position: relative;
+  left: -10px;
 }
 .icone_etape {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 50px;
+  min-width: 40px;
   margin: 0;
 }
 .description_etape {
   text-align: center;
   font-weight: bolder;
-  font-size: large;
+  font-size: medium;
 }
 #premiere_etape::before {
   font-family: "Font Awesome 5 Free";
@@ -306,18 +312,26 @@ footer > ul > li {
 /* Fin des règles applicables aux footers et leurs composants */
 
 /* Section des règles spécifiques aux pages de menus */
+#main_container_menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #f6f6f6;
+}
+
 /* Header */
-.header_menu {
+#header_menu {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-.entete_menu {
+#entete_menu {
   display: flex;
   align-items: center;
   background-color: white;
 }
-.fleche_retour {
+#fleche_retour {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,21 +340,21 @@ footer > ul > li {
   font-size: larger;
   color: black;
 }
-.entete_menu > figure {
+#entete_menu > figure {
   margin: 0 2em;
 }
-.photo_restaurant {
+#photo_restaurant {
   display: flex;
   flex-direction: column;
   max-width: 100%;
   margin: 0;
   position: relative;
 }
-.photo_restaurant > img {
+#photo_restaurant > img {
   max-width: 100%;
   object-fit: cover;
 }
-.photo_restaurant > figcaption {
+#photo_restaurant > figcaption {
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
@@ -352,17 +366,19 @@ footer > ul > li {
   bottom: -30px;
   background-color: #f6f6f6;
 }
-.titre_menu {
+#titre_menu {
+  width: 100%;
   font-family: "Shrikland";
   font-weight: bold;
   font-style: italic;
   font-size: xx-large;
+  text-align: center;
 }
-.titre_menu + .bouton_like {
+#titre_menu + #bouton_like {
   color: #f6f6f6;
 }
 /* Pourquoi ce n'est pas hérité de la première déclaration ? */
-.titre_menu + .bouton_like:hover {
+#titre_menu + #bouton_like:hover {
   color: #9356dc;
   stroke: none;
 }
@@ -373,7 +389,6 @@ footer > ul > li {
   display: flex;
   flex-direction: column;
   padding: 1em;
-  background-color: #f6f6f6;
 }
 .container_titre {
   min-height: 40px;
