@@ -256,7 +256,7 @@ h1 {
   stroke: black;
   stroke-width: 1em;
   position: relative;
-  z-index: 99999;
+  z-index: 999;
 }
 .bouton_like:hover,
 .bouton_like:active {
@@ -406,6 +406,7 @@ footer > ul > li {
   background-color: #99e2d0;
 }
 .plat {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -423,6 +424,11 @@ footer > ul > li {
   text-overflow: ellipsis;
 }
 .coche {
+  min-width: 60px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
 }
 #bouton_commander {
@@ -430,11 +436,20 @@ footer > ul > li {
   justify-self: center;
 }
 /* Fin des plats */
-
 /* Fin des règles spécifiques aux pages de menus */
 
 /* Règles spécifiques aux formats tablettes */
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  #main_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header,
+  main,
+  footer {
+    width: 50%;
+  }
+
   #premiere_etape::before {
     font-family: "Font Awesome 5 Free";
     content: "\f3fa";
@@ -446,5 +461,58 @@ footer > ul > li {
   #premiere_etape::before {
     font-family: "Font Awesome 5 Free";
     content: "\f108";
+  }
+}
+
+/* Animations CSS */
+/* Loading spinner, dans l'idée il faudrait avoir une pseudo-classe qui permette de déclencher l'animation du spinner.
+Une partie du spinner rendrait la page opaque et l'autre afficherait effectivement l'animation */
+#spinner_container {
+  width: 100%;
+  /* Trouver un moyen de faire prendre toute la hauteur et pas seulement la hauteur visible */
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: #868686;
+  opacity: 0.5;
+}
+#loading_spinner {
+  border: 3px solid #9356dc;
+  border-bottom: #fd88dc;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  position: relative;
+  /* Trouver un moyen de centrer systématiquement le spinner */
+  left: 33%;
+  top: 50%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remplissage progressif du bouton 'j'aime' */
+
+/* Coche de séléction d'un plat */
+.coche {
+  border: #868686 3px;
+}
+.plat:hover + .coche {
+  animation: left-slide 1s ease-in-out;
+  background-color: red;
+  visibility: visible;
+}
+@keyframes left-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
   }
 }
