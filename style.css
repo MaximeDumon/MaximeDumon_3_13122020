@@ -47,6 +47,7 @@ body {
 }
 #main_container {
   width: 100%;
+  max-width: 1600px;
   margin: auto;
 }
 h1,
@@ -152,6 +153,7 @@ h1 {
 
 /* Règles applicables à la première section 'Fonctionnement' et ses composants */
 #liste_fonctionnement {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,13 +195,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 40px;
+  min-width: 30px;
   margin: 0;
 }
 .description_etape {
   text-align: center;
   font-weight: bolder;
   font-size: medium;
+  justify-self: flex-end;
 }
 #premiere_etape::before {
   font-family: "Font Awesome 5 Free";
@@ -208,6 +211,11 @@ h1 {
 /* Fin des règles applicables à la première section 'Fonctionnement' et ses composants */
 
 /* Règles applicables à la première section 'Restaurants' et ses composants */
+#restaurants > a,
+.vignette_restaurant,
+.vignette_restaurant > img {
+  border-radius: 1em 1em 0 0;
+}
 #restaurants > a {
   width: 100%;
   display: flex;
@@ -224,7 +232,6 @@ h1 {
   max-width: 100%;
   max-height: 175px;
   object-fit: cover;
-  border-radius: 1em 1em 0 0;
 }
 .label_nouveau {
   width: 80px;
@@ -261,6 +268,9 @@ h1 {
 .bouton_like:hover,
 .bouton_like:active {
   color: #9356dc;
+  background: linear-gradient(#9356dc, #99e2d0);
+  color: transparent;
+  background-clip: text;
   stroke: none;
 }
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
@@ -377,7 +387,6 @@ footer > ul > li {
 #titre_menu + #bouton_like {
   color: #f6f6f6;
 }
-/* Pourquoi ce n'est pas hérité de la première déclaration ? */
 #titre_menu + #bouton_like:hover {
   color: #9356dc;
   stroke: none;
@@ -385,6 +394,10 @@ footer > ul > li {
 /* Fin du header */
 
 /* Plats */
+#main_menu {
+  display: flex;
+  flex-direction: column;
+}
 .plats {
   display: flex;
   flex-direction: column;
@@ -406,6 +419,7 @@ footer > ul > li {
   background-color: #99e2d0;
 }
 .plat {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -425,7 +439,6 @@ footer > ul > li {
 }
 .coche {
   min-width: 60px;
-  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,27 +453,108 @@ footer > ul > li {
 
 /* Règles spécifiques aux formats tablettes */
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  #main_container {
+  header {
+    border-radius: 0 0 1em 1em;
+  }
+  main {
     display: flex;
-    flex-wrap: wrap;
   }
-  header,
-  main,
-  footer {
-    width: 50%;
+  #fonctionnement,
+  #restaurants {
+    box-sizing: border-box;
   }
-
+  #fonctionnement {
+    width: 40%;
+  }
+  #liste_fonctionnement {
+    min-width: 300px;
+  }
   #premiere_etape::before {
     font-family: "Font Awesome 5 Free";
     content: "\f3fa";
+  }
+  #restaurants {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0.5em;
+    border-radius: 1em 1em 0 0;
+  }
+  #restaurants > h2 {
+    width: 100%;
+  }
+  #restaurants > a {
+    max-width: 46%;
+    margin-right: 1em;
+  }
+  .vignette_restaurant > img {
+    min-height: 175px;
+  }
+  .vignette_restaurant > figcaption {
+    padding: 0.5em;
   }
 }
 
 /* Règles spécifiques aux formats desktop */
 @media all and (min-width: 1025px) {
+  #liste_fonctionnement {
+    flex-direction: row;
+  }
+  #liste_fonctionnement > li {
+    margin-right: 2em;
+  }
+  .description_etape {
+    margin-left: 2em;
+  }
   #premiere_etape::before {
     font-family: "Font Awesome 5 Free";
     content: "\f108";
+  }
+  #restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #restaurants > h2 {
+    width: 100%;
+  }
+  #restaurants > a,
+  #vignette_restaurant {
+    max-width: 500px;
+  }
+
+  /* Mise en forme des menus */
+  #main_menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .plats {
+    width: 30%;
+  }
+  #bouton_commander {
+    margin: auto;
+    margin-bottom: 1em;
+  }
+}
+@media all and (min-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #logo_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer > ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  footer > ul > li {
+    margin-left: 1.5em;
   }
 }
 
