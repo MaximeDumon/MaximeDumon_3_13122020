@@ -559,28 +559,38 @@ footer > ul > li {
 }
 
 /* Animations CSS */
-/* Loading spinner, dans l'idée il faudrait avoir une pseudo-classe qui permette de déclencher l'animation du spinner.
-Une partie du spinner rendrait la page opaque et l'autre afficherait effectivement l'animation */
+/* Loading spinner */
+/* Première partie, le fond vient se mettre par dessus le main container avec un fond gris et une opacité */
 #spinner_container {
   width: 100%;
-  /* Trouver un moyen de faire prendre toute la hauteur et pas seulement la hauteur visible */
+  max-width: inherit;
   height: 100%;
   position: absolute;
   z-index: 1000;
-  background-color: #868686;
+  background-color: grey;
   opacity: 0.5;
+  visibility: hidden;
+  animation: backgroundFill 2s 1;
 }
+@keyframes backgroundFill {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/* Deuxième partie, le spinner vient se placer au centre de la page et execute son animation */
 #loading_spinner {
-  border: 3px solid #9356dc;
-  border-bottom: #fd88dc;
+  width: 200px;
+  height: 200px;
+  border: #9864d8 solid 2px;
+  border-top: #9356dc solid 5px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1s linear infinite;
   position: relative;
-  /* Trouver un moyen de centrer systématiquement le spinner */
-  left: 33%;
   top: 50%;
+  left: 45%;
+  animation: spin 2s ease-in-out 1;
 }
 @keyframes spin {
   0% {
@@ -590,23 +600,5 @@ Une partie du spinner rendrait la page opaque et l'autre afficherait effectiveme
     transform: rotate(360deg);
   }
 }
-
 /* Remplissage progressif du bouton 'j'aime' */
-
 /* Coche de séléction d'un plat */
-.coche {
-  border: #868686 3px;
-}
-.plat:hover + .coche {
-  animation: left-slide 1s ease-in-out;
-  background-color: red;
-  visibility: visible;
-}
-@keyframes left-slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
