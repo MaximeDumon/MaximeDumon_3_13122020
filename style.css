@@ -45,7 +45,8 @@
 body {
   margin: 0;
 }
-#main_container {
+#main_container,
+#main_container_menu {
   width: 100%;
   max-width: 1600px;
   margin: auto;
@@ -261,17 +262,8 @@ h1 {
   font-size: x-large;
   color: white;
   stroke: black;
-  stroke-width: 1em;
-  position: relative;
+  stroke-width: 5px;
   z-index: 999;
-}
-.bouton_like:hover,
-.bouton_like:active {
-  color: #9356dc;
-  background: linear-gradient(#9356dc, #99e2d0);
-  color: transparent;
-  background-clip: text;
-  stroke: none;
 }
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
 
@@ -323,10 +315,8 @@ footer > ul > li {
 
 /* Section des règles spécifiques aux pages de menus */
 #main_container_menu {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: auto;
   background-color: #f6f6f6;
 }
 
@@ -402,6 +392,7 @@ footer > ul > li {
   display: flex;
   flex-direction: column;
   padding: 1em;
+  opacity: 0;
 }
 .container_titre {
   min-height: 40px;
@@ -600,5 +591,38 @@ footer > ul > li {
     transform: rotate(360deg);
   }
 }
+
 /* Remplissage progressif du bouton 'j'aime' */
+.bouton_like:hover {
+  animation: changeColor 0.5s ease-out 1;
+}
+@keyframes changeColor {
+  from {
+    color: white;
+  }
+  to {
+    color: #9356dc;
+  }
+}
+
 /* Coche de séléction d'un plat */
+/* Chargement des menus */
+.entrees {
+  animation: arrivee 1s ease-in-out forwards 1;
+}
+.plats_principaux {
+  animation: arrivee 1s ease-in-out forwards 0.5s 1;
+}
+.desserts {
+  animation: arrivee 1s ease-in-out forwards 1s 1;
+}
+@keyframes arrivee {
+  from {
+    opacity: 0;
+    transform: translate(-220px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
