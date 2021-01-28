@@ -413,27 +413,49 @@ footer > ul > li {
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 1em;
+  justify-content: space-between;
+  align-items: stretch;
   border-radius: 1em;
+  margin: 1em 0;
   background-color: white;
   box-shadow: 0 10px 10px #c5c5c59d;
+  overflow: hidden;
+  cursor: pointer;
+}
+.description_plat,
+.prix_plat {
+  box-sizing: border-box;
+  padding: 0.7em;
 }
 .description_plat {
+  min-width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-.texte_rognable {
+.prix_plat {
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.texte_rognable,
+h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .coche {
+  box-sizing: border-box;
+  min-height: inherit;
   min-width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
+  color: white;
+  background-color: #99e2d0;
+  border-radius: 0 1em 1em 0;
 }
 #bouton_commander {
   width: 190px;
@@ -593,7 +615,7 @@ footer > ul > li {
 }
 
 /* Remplissage progressif du bouton 'j'aime' */
-.bouton_like:hover {
+.bouton_like:hover .bouton_like {
   animation: changeColor 0.5s ease-out 1;
 }
 @keyframes changeColor {
@@ -606,6 +628,29 @@ footer > ul > li {
 }
 
 /* Coche de séléction d'un plat */
+.plat:hover .coche,
+.plat:hover .prix_plat {
+  animation: decallage 0.3s ease-out 1 forwards;
+}
+.plat:hover .fa-check-circle {
+  animation: rotation 0.3s ease-out 1 forwards;
+}
+@keyframes decallage {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 /* Chargement des menus */
 .entrees {
   animation: arrivee 1s ease-in-out forwards 1;
