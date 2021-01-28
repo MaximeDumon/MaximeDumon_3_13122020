@@ -206,7 +206,7 @@ h1 {
   justify-self: flex-end;
 }
 #premiere_etape::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "FontAwesome";
   content: "\f3cd";
 }
 /* Fin des règles applicables à la première section 'Fonctionnement' et ses composants */
@@ -259,11 +259,10 @@ h1 {
   border-radius: 0 0 1em 1em;
 }
 .bouton_like {
-  font-size: x-large;
-  color: white;
-  stroke: black;
-  stroke-width: 5px;
-  z-index: 999;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 150%;
 }
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
 
@@ -331,13 +330,16 @@ footer > ul > li {
   align-items: center;
   background-color: white;
 }
+#bouton_retour {
+  text-decoration: none;
+}
 #fleche_retour {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 65px;
   height: 65px;
-  font-size: larger;
+  padding-left: 1em;
   color: black;
 }
 #entete_menu > figure {
@@ -374,13 +376,6 @@ footer > ul > li {
   font-size: xx-large;
   text-align: center;
 }
-#titre_menu + #bouton_like {
-  color: #f6f6f6;
-}
-#titre_menu + #bouton_like:hover {
-  color: #9356dc;
-  stroke: none;
-}
 /* Fin du header */
 
 /* Plats */
@@ -392,7 +387,6 @@ footer > ul > li {
   display: flex;
   flex-direction: column;
   padding: 1em;
-  opacity: 0;
 }
 .container_titre {
   min-height: 40px;
@@ -421,6 +415,7 @@ footer > ul > li {
   box-shadow: 0 10px 10px #c5c5c59d;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
 }
 .description_plat,
 .prix_plat {
@@ -483,7 +478,7 @@ h3 {
     min-width: 300px;
   }
   #premiere_etape::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
     content: "\f3fa";
   }
   #restaurants {
@@ -521,7 +516,7 @@ h3 {
     margin-left: 2em;
   }
   #premiere_etape::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
     content: "\f108";
   }
   #restaurants {
@@ -537,7 +532,6 @@ h3 {
   #vignette_restaurant {
     max-width: 500px;
   }
-
   /* Mise en forme des menus */
   #main_menu {
     flex-direction: row;
@@ -615,15 +609,25 @@ h3 {
 }
 
 /* Remplissage progressif du bouton 'j'aime' */
-.bouton_like:hover .bouton_like {
-  animation: changeColor 0.5s ease-out 1;
+.bouton_like:hover {
+  animation: color_fill 1.5s ease-out 1 forwards;
 }
-@keyframes changeColor {
-  from {
-    color: white;
+@keyframes color_fill {
+  0% {
+    background: linear-gradient(-45deg, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    -webkit-text-stroke: unset;
   }
-  to {
-    color: #9356dc;
+  100% {
+    background: linear-gradient(0deg, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    -webkit-text-stroke: unset;
   }
 }
 
@@ -652,22 +656,22 @@ h3 {
   }
 }
 /* Chargement des menus */
-.entrees {
-  animation: arrivee 1s ease-in-out forwards 1;
+.premier_plat {
+  animation: arrivee 1s ease-in-out 0.3s 1 forwards;
 }
-.plats_principaux {
-  animation: arrivee 1s ease-in-out forwards 0.5s 1;
+.second_plat {
+  animation: arrivee 1s ease-in-out 0.5s 1 forwards;
 }
-.desserts {
-  animation: arrivee 1s ease-in-out forwards 1s 1;
+.dernier_plat {
+  animation: arrivee 1s ease-in-out 0.7s 1 forwards;
 }
 @keyframes arrivee {
   from {
+    transform: translateY(10px);
     opacity: 0;
-    transform: translate(-220px);
   }
   to {
+    transform: translateY(0px);
     opacity: 1;
-    transform: translate(0);
   }
 }
