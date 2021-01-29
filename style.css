@@ -424,17 +424,21 @@ footer > ul > li {
 .prix_plat {
   box-sizing: border-box;
   padding: 0.7em;
+  flex-shrink: 0;
 }
 .description_plat {
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .prix_plat {
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  text-align: right;
 }
 .texte_rognable,
 h3 {
@@ -449,6 +453,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 0 initial;
   color: white;
   background-color: #99e2d0;
   border-radius: 0 1em 1em 0;
@@ -593,7 +598,7 @@ h3 {
   width: 90px;
   height: 90px;
   border: #9864d8 solid 5px;
-  border-top:#99e2d0 solid 5px;
+  border-top: #99e2d0 solid 5px;
   border-radius: 50%;
   position: relative;
   top: 50%;
@@ -633,9 +638,11 @@ h3 {
 }
 
 /* Coche de séléction d'un plat */
-.plat:hover .coche,
-.plat:hover .prix_plat {
+.plat:hover .coche {
   animation: decallage 0.3s ease-out 1 forwards;
+}
+.plat:hover .prix_plat {
+  animation: decallage_prix 0.3s ease-out 1 forwards;
 }
 .plat:hover .fa-check-circle {
   animation: rotation 0.3s ease-out 1 forwards;
@@ -646,6 +653,14 @@ h3 {
   }
   to {
     transform: translate(-100%);
+  }
+}
+@keyframes decallage_prix {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-50%);
   }
 }
 @keyframes rotation {
