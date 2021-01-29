@@ -1,0 +1,693 @@
+/* Déclarations des polices */
+/* Pour les titres et logos */
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/polices/Shrikland/shrikhand-regular-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Shrikland/shrikhand-regular-webfont.svg") format("svg");
+  src: url("/polices/Shrikland/shrikhand-regular-webfont.ttf")
+    format("truetype");
+  src: url("/polices/Shrikland/shrikhand-regular-webfont.woff") format("woff");
+}
+/* Pour les textes réguliers */
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.svg") format("svg");
+  src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.ttf")
+    format("truetype");
+  src: url("/polices/Roboto/Regular/Roboto-Regular-webfont.woff") format("woff");
+}
+/* Pour les textes en gras */
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.svg") format("svg");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.ttf") format("truetype");
+  src: url("/polices/Roboto/Bold/Roboto-Bold-webfont.woff") format("woff");
+}
+/* Pour les textes plus fins */
+@font-face {
+  font-family: "Roboto";
+  font-weight: thin;
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.svg") format("svg");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.ttf") format("truetype");
+  src: url("/polices/Roboto/Thin/Roboto-Thin-webfont.woff") format("woff");
+}
+
+/* Règles générales qui s'appliquent dans tous le documents, les exceptions sont traitées spécifiquement dans les blocs suivants */
+body {
+  margin: 0;
+}
+#main_container,
+#main_container_menu {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+p,
+li {
+  font-family: "Roboto";
+  margin: 0;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Règles applicables aux headers et leurs composants */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0 2em;
+  margin-bottom: 2em;
+  background-color: #f6f6f6;
+}
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1em 0;
+  background-color: white;
+}
+.logo > img {
+  width: 165px;
+}
+#localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0;
+  background-color: #eaeaea;
+  box-shadow: 0 2px 2px #c7c7c7 inset;
+}
+#icone_localisation {
+  margin-right: 1em;
+}
+#localisation > p {
+  margin: 0.5em;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+h1 {
+  padding: 0.5em 1.5em;
+  margin-top: 1em;
+  font-size: 1.6em;
+  line-height: 1.1em;
+  text-align: center;
+}
+#description {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+.bouton_principal {
+  width: 220px;
+  height: 50px;
+  align-self: center;
+  margin: 1.5em 0;
+  border-radius: 2.5em;
+  border-style: none;
+  font-size: medium;
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 2px 5px #c5c5c5;
+  cursor: pointer;
+}
+.bouton_principal:hover {
+  background: linear-gradient(#fd88dc, #9864d8);
+  box-shadow: 0 2px 10px #868686;
+}
+/* Fin des règles applicables aux headers et leurs composants */
+
+/* Règles générales applicables aux sections fonctionnement et restaurants et leurs composants */
+#fonctionnement,
+#restaurants {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+}
+#restaurants {
+  background-color: #f6f6f6;
+}
+#restaurants > a {
+  text-decoration: none;
+}
+#restaurants > a:link,
+#restaurants > a:visited {
+  color: black;
+}
+
+/* Fin des règles générales applicables aux sections fonctionnement et restaurants et leurs composants */
+
+/* Règles applicables à la première section 'Fonctionnement' et ses composants */
+#liste_fonctionnement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+#liste_fonctionnement > li {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: 1em 10px 1em 0;
+  background-color: #f6f6f6;
+  border-radius: 1.5em;
+  box-shadow: 0 10px 10px #c5c5c59d;
+  position: relative;
+  left: 10px;
+}
+#liste_fonctionnement > li:hover {
+  background-color: #f4edfe;
+}
+#liste_fonctionnement > li:hover .icone_etape {
+  color: #9356dc;
+}
+.numero_etape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9864d8;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  left: -10px;
+}
+.icone_etape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  margin: 0;
+}
+.description_etape {
+  text-align: center;
+  font-weight: bolder;
+  font-size: medium;
+  justify-self: flex-end;
+}
+#premiere_etape::before {
+  font-family: "FontAwesome";
+  content: "\f3cd";
+}
+/* Fin des règles applicables à la première section 'Fonctionnement' et ses composants */
+
+/* Règles applicables à la première section 'Restaurants' et ses composants */
+#restaurants > a,
+.vignette_restaurant,
+.vignette_restaurant > img {
+  border-radius: 1em 1em 0 0;
+}
+#restaurants > a {
+  width: 100%;
+  display: flex;
+  margin: 1em 0;
+}
+.vignette_restaurant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+}
+.vignette_restaurant > img {
+  max-width: 100%;
+  max-height: 175px;
+  object-fit: cover;
+}
+.label_nouveau {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-transform: capitalize;
+  background-color: #99e2d0;
+  font-weight: bold;
+  color: #388568;
+  border-radius: 0.2em;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.vignette_restaurant > figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: white;
+  border-radius: 0 0 1em 1em;
+}
+.bouton_like {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 150%;
+}
+/* Fin des règles applicables à la première section 'Restaurants' et ses composants */
+
+/* Règles applicables aux footers et leurs composants */
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: bold;
+  background-color: #353535;
+  padding: 1.5em;
+}
+#logo_footer {
+  margin: 0;
+  filter: invert(100%);
+}
+#logo_footer > img {
+  width: 100px;
+}
+footer > ul {
+  list-style-type: none;
+  color: white;
+  padding: 0;
+}
+footer > ul > li {
+  display: flex;
+  padding: 0.2em 0;
+}
+#icone_restaurant,
+#icone_partenaire {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em 0 0;
+}
+#icone_partenaire > svg {
+  display: inline-block;
+  transform: rotate(-45deg);
+  font-size: small;
+}
+#contact {
+  text-decoration: none;
+}
+#contact:link,
+#contact:visited {
+  color: white;
+}
+/* Fin des règles applicables aux footers et leurs composants */
+
+/* Section des règles spécifiques aux pages de menus */
+#main_container_menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+/* Header */
+#header_menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#entete_menu {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+#bouton_retour {
+  text-decoration: none;
+}
+#fleche_retour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  padding-left: 1em;
+  color: black;
+}
+#entete_menu > figure {
+  margin: 0 2em;
+}
+#photo_restaurant {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+}
+#photo_restaurant > img {
+  max-width: 100%;
+  object-fit: cover;
+}
+#photo_restaurant > figcaption {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  border-radius: 2em 2em 0 0;
+  position: absolute;
+  bottom: -30px;
+  background-color: #f6f6f6;
+}
+#titre_menu {
+  width: 100%;
+  font-family: "Shrikland";
+  font-weight: bold;
+  font-style: italic;
+  font-size: xx-large;
+  text-align: center;
+}
+#bouton_like_menu {
+  -webkit-text-fill-color: #f6f6f6;
+}
+/* Fin du header */
+
+/* Plats */
+#main_menu {
+  display: flex;
+  flex-direction: column;
+}
+.plats {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.container_titre {
+  min-height: 40px;
+  padding: 0.5em;
+}
+.titre_section {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: medium;
+}
+.trait_titre {
+  width: 40px;
+  min-height: 2px;
+  background-color: #99e2d0;
+}
+.plat {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 1em;
+  margin: 1em 0;
+  background-color: white;
+  box-shadow: 0 10px 10px #c5c5c59d;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+.description_plat,
+.prix_plat {
+  box-sizing: border-box;
+  padding: 0.7em;
+  flex-shrink: 0;
+}
+.description_plat {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.prix_plat {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+.texte_rognable,
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coche {
+  box-sizing: border-box;
+  min-height: inherit;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 initial;
+  color: white;
+  background-color: #99e2d0;
+  border-radius: 0 1em 1em 0;
+}
+#bouton_commander {
+  width: 190px;
+  justify-self: center;
+}
+/* Fin des plats */
+/* Fin des règles spécifiques aux pages de menus */
+
+/* Règles spécifiques aux formats tablettes */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    border-radius: 0 0 1em 1em;
+  }
+  main {
+    display: flex;
+  }
+  #fonctionnement,
+  #restaurants {
+    box-sizing: border-box;
+  }
+  #fonctionnement {
+    width: 40%;
+  }
+  #liste_fonctionnement {
+    min-width: 300px;
+  }
+  #premiere_etape::before {
+    font-family: "FontAwesome";
+    content: "\f3fa";
+  }
+  #restaurants {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0.5em;
+    border-radius: 1em 1em 0 0;
+  }
+  #restaurants > h2 {
+    width: 100%;
+  }
+  #restaurants > a {
+    max-width: 46%;
+    margin-right: 1em;
+  }
+  .vignette_restaurant > img {
+    min-height: 175px;
+  }
+  .vignette_restaurant > figcaption {
+    padding: 0.5em;
+  }
+}
+
+/* Règles spécifiques aux formats desktop */
+@media all and (min-width: 1025px) {
+  #liste_fonctionnement {
+    flex-direction: row;
+  }
+  #liste_fonctionnement > li {
+    margin-right: 2em;
+  }
+  .description_etape {
+    margin-left: 2em;
+  }
+  #premiere_etape::before {
+    font-family: "FontAwesome";
+    content: "\f108";
+  }
+  #restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #restaurants > h2 {
+    width: 100%;
+  }
+  #restaurants > a,
+  #vignette_restaurant {
+    max-width: 500px;
+  }
+  /* Mise en forme des menus */
+  #main_menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .plats {
+    width: 30%;
+  }
+  #bouton_commander {
+    margin: auto;
+    margin-bottom: 1em;
+  }
+}
+@media all and (min-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #logo_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer > ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  footer > ul > li {
+    margin-left: 1.5em;
+  }
+}
+
+/* Animations CSS */
+/* Loading spinner */
+/* Première partie, le fond vient se mettre par dessus le main container avec un fond gris et une opacité */
+#spinner_container {
+  width: 100%;
+  max-width: inherit;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: #e9dcda;
+  opacity: 0.6;
+  visibility: hidden;
+  animation: backgroundFill 2s 1;
+}
+@keyframes backgroundFill {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/* Deuxième partie, le spinner vient se placer au centre de la page et execute son animation */
+#loading_spinner {
+  width: 90px;
+  height: 90px;
+  border: #9864d8 solid 5px;
+  border-top: #99e2d0 solid 5px;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 45%;
+  animation: spin 2s ease-in-out 1;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remplissage progressif du bouton 'j'aime' */
+.bouton_like:hover {
+  animation: color_fill 1.5s ease-out 1 forwards;
+}
+@keyframes color_fill {
+  0% {
+    background: linear-gradient(-45deg, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    -webkit-text-stroke: unset;
+  }
+  100% {
+    background: linear-gradient(0deg, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    -webkit-text-stroke: unset;
+  }
+}
+
+/* Coche de séléction d'un plat */
+.plat:hover .coche {
+  animation: decallage 0.3s ease-out 1 forwards;
+}
+.plat:hover .prix_plat {
+  animation: decallage_prix 0.3s ease-out 1 forwards;
+}
+.plat:hover .fa-check-circle {
+  animation: rotation 0.3s ease-out 1 forwards;
+}
+@keyframes decallage {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+@keyframes decallage_prix {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/* Chargement des menus */
+.premier_plat {
+  animation: arrivee 1s ease-in-out 0.3s 1 forwards;
+}
+.second_plat {
+  animation: arrivee 1s ease-in-out 0.5s 1 forwards;
+}
+.dernier_plat {
+  animation: arrivee 1s ease-in-out 0.7s 1 forwards;
+}
+@keyframes arrivee {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

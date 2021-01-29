@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    />
     <script
       src="https://kit.fontawesome.com/fdd83998d8.js"
       crossorigin="anonymous"
@@ -18,104 +15,128 @@
   </title>
   <body>
     <div id="main_container">
+      <!-- Loading spinner -->
+      <div id="spinner_container"><div id="loading_spinner"></div></div>
       <!-- Header contenant le logo, la barre de localisation, la présentation du site et le bouton 'explorer nos restaurants' -->
       <header>
         <!-- Logo du site -->
-        <figure>
+        <figure class="logo">
           <img src="./images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
         </figure>
         <!-- Localisation -->
-        <div>
+        <div id="localisation">
           <!-- Icône de localisation -->
-          <i class="fas fa-map-marker-alt"></i>
+          <div id="icone_localisation">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
           <p>paris, belleville</p>
         </div>
         <!-- Titre principal -->
-        <h1>réservez le menu qui vous convient</h1>
+        <h1>
+          <span class="capitalize">réservez</span> le menu qui vous convient
+        </h1>
         <!-- Description du site -->
-        <p>
-          découvrez des restaurants d'exception, sélectionnés par nos soins.
+        <p id="description">
+          <span class="capitalize">découvrez</span> des restaurants d'exception,
+          sélectionnés par nos soins.
         </p>
         <!-- Bouton 'explorez nos restaurants' -->
-        <button type="button">explorer nos restaurants</button>
+        <button class="bouton_principal" type="button">
+          <span class="capitalize">explorer</span> nos restaurants
+        </button>
       </header>
       <!-- Main composant contenant les deux sections 'fonctionnement' et 'restaurants' -->
       <main>
         <!-- Première section du main contenant le fonctionnement du site -->
-        <section>
+        <section id="fonctionnement">
           <!-- Titre -->
-          <h2>fonctionnement</h2>
+          <h2><span class="capitalize">fonctionnement</span></h2>
           <!-- Liste ordonnée pour structurer les différentes étapes -->
-          <ol>
+          <ol id="liste_fonctionnement">
             <!-- Carte explicative du fonctionnement, 1ère étape -->
             <li>
+              <!-- Numéro de l'étape -->
+              <p class="numero_etape">1</p>
               <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <div id="premiere_etape" class="icone_etape"></div>
               <!-- Description de l'étape 1 -->
-              <p>choisissez un restaurant</p>
+              <p class="description_etape">
+                <span class="capitalize">choisissez</span> un restaurant
+              </p>
             </li>
             <!-- Carte explicative du fonctionnement, 2ème étape -->
             <li>
-              <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <!-- Numéro de l'étape -->
+              <p class="numero_etape">2</p>
+              <!-- Icône d'étape -->
+              <div class="icone_etape"><i class="fas fa-list-ul"></i></div>
               <!-- Description de l'étape 2 -->
-              <p>composez votre menu</p>
+              <p class="description_etape">
+                <span class="capitalize">composez</span> votre menu
+              </p>
             </li>
             <!-- Carte explicative du fonctionnement, 3ème étape -->
             <li>
-              <!-- Icône de device ajouté via le CSS car spécifique en fonction du device sur lequel on se trouve -->
+              <!-- Numéro de l'étape -->
+              <p class="numero_etape">3</p>
+              <!-- Icône d'étape -->
+              <div class="icone_etape"><i class="fas fa-store"></i></div>
               <!-- Description de l'étape 3 -->
-              <p>dégustez au restaurant</p>
+              <p class="description_etape">
+                <span class="capitalize">dégustez</span> au restaurant
+              </p>
             </li>
           </ol>
         </section>
         <!-- Deuxième section du main contenant la liste des restaurants disponibles -->
-        <section>
+        <section id="restaurants">
           <!-- Titre -->
-          <h2>restaurants</h2>
+          <h2 class="capitalize">restaurants</h2>
           <!-- Carte du premier restaurant -->
           <a href="./html/palette_du_gout.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/palette_du_gout.jpg"
                 alt="Une superbe assiette composée de saumon et d'une salade"
               />
               <!-- Label nouveau -->
-              <p>nouveau</p>
+              <p class="label_nouveau">nouveau</p>
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>la palette du goût</h3>
-                  <p>ménilmontant</p>
+                  <h3><span class="capitalize">la</span> palette du goût</h3>
+                  <p class="capitalize">ménilmontant</p>
                 </div>
                 <!-- Bouton 'j'aime' -->
-                <div><i class="far fa-heart"></i></div>
+                <i class="bouton_like fas fa-heart"></i>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du second restaurant -->
           <a href="./html/note_enchantee.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/note_enchantee.jpg"
                 alt="Une assiette bien garnie de bouchées et légumes en sauce avec du poisson"
               />
               <!-- Label nouveau -->
-              <p>nouveau</p>
+              <p class="label_nouveau">nouveau</p>
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>la note enchantée</h3>
-                  <p>charonne</p>
+                  <h3><span class="capitalize">la</span> note enchantée</h3>
+                  <p class="capitalize">charonne</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du troisième restaurant -->
           <a href="./html/a_la_française.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/a_la_française.jpg"
@@ -124,17 +145,17 @@
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>à la française</h3>
-                  <p>cité rouge</p>
+                  <h3><span class="capitalize">à</span> la française</h3>
+                  <p class="capitalize">cité rouge</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
           <!-- Carte du quatrième restaurant -->
           <a href="./html/delice_des_sens.html">
-            <figure>
+            <figure class="vignette_restaurant">
               <!-- Photo du plat de présentation du restaurant -->
               <img
                 src="./images/restaurants/delice_des_sens.jpg"
@@ -143,11 +164,11 @@
               <!-- Non du restaurant et sa localisation ainsi que le bouton 'j'aime' -->
               <figcaption>
                 <div>
-                  <h3>le délice des sens</h3>
-                  <p>folie-méricourt</p>
+                  <h3><span class="capitalize">le</span> délice des sens</h3>
+                  <p class="capitalize">folie-méricourt</p>
                 </div>
                 <!-- Bouton 'j'aime -->
-                <div><i class="far fa-heart"></i></div>
+                <div class="bouton_like"><i class="fas fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
@@ -156,15 +177,27 @@
       <!-- Footer contenant les liens de contact, légaux et de participation au site -->
       <footer>
         <!-- Logo du site -->
-        <figure>
+        <figure id="logo_footer">
           <img src="images/logo/logo.svg" alt="Logo texte écrit ohmyfood" />
         </figure>
         <!-- Liste des éléments du footer, les icônes spécifiques sont ajoutés en via le code CSS -->
         <ul>
-          <li>proposer un restaurant</li>
-          <li>devenir partenaire</li>
-          <li>mentions légales</li>
-          <li><a href="mailto:contact@ohmyfood.com">contact</a></li>
+          <li>
+            <div id="icone_restaurant"><i class="fas fa-utensils"></i></div>
+            <p><span class="capitalize">proposer</span> un restaurant</p>
+          </li>
+          <li>
+            <div id="icone_partenaire"><i class="fas fa-handshake"></i></div>
+            <p><span class="capitalize">devenir</span> partenaires</p>
+          </li>
+          <li>
+            <p><span class="capitalize">mentions</span> légales</p>
+          </li>
+          <li>
+            <a id="contact" href="mailto:contact@ohmyfood.com"
+              ><span class="capitalize">contact</span></a
+            >
+          </li>
         </ul>
       </footer>
     </div>
