@@ -261,10 +261,30 @@ h1 {
 .bouton_like {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #9356dc;
   font-size: 150%;
   cursor: pointer;
+  position: relative;
+  opacity: 1;
 }
+/* A SUPPRIMER */
+.bouton_like::after {
+  content: "\f004";
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+.bouton_like:hover::after {
+  opacity: 1;
+}
+/* A SUPPRIMER */
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
 
 /* Règles applicables aux footers et leurs composants */
@@ -622,29 +642,6 @@ h3 {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-/* Remplissage progressif du bouton 'j'aime' */
-.bouton_like:hover {
-  animation: color_fill 1.5s ease-out 1 forwards;
-}
-@keyframes color_fill {
-  0% {
-    background: linear-gradient(-45deg, #ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    -webkit-text-stroke: unset;
-  }
-  100% {
-    background: linear-gradient(0deg, #ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    -webkit-text-stroke: unset;
   }
 }
 
