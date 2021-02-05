@@ -482,7 +482,7 @@ h3 {
 .coche i {
   transform: rotate(180deg);
   transition-property: transform;
-  transition-delay: 500ms;
+  transition-delay: 200ms;
   transition-duration: 500ms;
 }
 .plat:hover .description_plat {
