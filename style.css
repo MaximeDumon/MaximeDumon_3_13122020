@@ -261,10 +261,30 @@ h1 {
 .bouton_like {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #9356dc;
   font-size: 150%;
   cursor: pointer;
+  position: relative;
+  opacity: 1;
 }
+/* A SUPPRIMER */
+.bouton_like::after {
+  content: "\f004";
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+.bouton_like:hover::after {
+  opacity: 1;
+}
+/* A SUPPRIMER */
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
 
 /* Règles applicables aux footers et leurs composants */
@@ -299,7 +319,7 @@ footer > ul > li {
   align-items: center;
   padding: 0 0.5em 0 0;
 }
-#icone_partenaire > svg {
+#icone_partenaire {
   display: inline-block;
   transform: rotate(-45deg);
   font-size: small;
@@ -412,7 +432,6 @@ footer > ul > li {
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
   border-radius: 1em;
   margin: 1em 0;
@@ -429,18 +448,18 @@ footer > ul > li {
   flex-shrink: 0;
 }
 .description_plat {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition-property: width;
+  transition-duration: 500ms;
 }
 .prix_plat {
-  width: 30%;
+  width: 20%;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  text-align: right;
 }
 .texte_rognable,
 h3 {
@@ -449,16 +468,26 @@ h3 {
   text-overflow: ellipsis;
 }
 .coche {
+  width: 100px;
   box-sizing: border-box;
-  min-height: inherit;
-  min-width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 0 initial;
   color: white;
   background-color: #99e2d0;
   border-radius: 0 1em 1em 0;
+}
+.coche i {
+  transform: rotate(180deg);
+  transition-property: transform;
+  transition-delay: 500ms;
+  transition-duration: 500ms;
+}
+.plat:hover .description_plat {
+  width: 65%;
+}
+.plat:hover i {
+  transform: rotate(0deg);
 }
 #bouton_commander {
   width: 190px;
@@ -616,63 +645,6 @@ h3 {
   }
 }
 
-/* Remplissage progressif du bouton 'j'aime' */
-.bouton_like:hover {
-  animation: color_fill 1.5s ease-out 1 forwards;
-}
-@keyframes color_fill {
-  0% {
-    background: linear-gradient(-45deg, #ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    -webkit-text-stroke: unset;
-  }
-  100% {
-    background: linear-gradient(0deg, #ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    -webkit-text-stroke: unset;
-  }
-}
-
-/* Coche de séléction d'un plat */
-.plat:hover .coche {
-  animation: decallage 0.3s ease-out 1 forwards;
-}
-.plat:hover .prix_plat {
-  animation: decallage_prix 0.3s ease-out 1 forwards;
-}
-.plat:hover .fa-check-circle {
-  animation: rotation 0.3s ease-out 1 forwards;
-}
-@keyframes decallage {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translate(-100%);
-  }
-}
-@keyframes decallage_prix {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translate(-50%);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
 /* Chargement des menus */
 .premier_plat {
   animation: arrivee 1s ease-in-out 0.3s 1 forwards;
