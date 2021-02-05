@@ -125,6 +125,7 @@ h1 {
   box-shadow: 0 2px 5px #c5c5c5;
   cursor: pointer;
 }
+/* ANIMATION: bouton principal */
 .bouton_principal:hover {
   background: linear-gradient(#fd88dc, #9864d8);
   box-shadow: 0 2px 10px #868686;
@@ -258,6 +259,7 @@ h1 {
   background-color: white;
   border-radius: 0 0 1em 1em;
 }
+/* ANIMATION: remplissage du bouton j'aime */
 .bouton_like {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -267,7 +269,6 @@ h1 {
   position: relative;
   opacity: 1;
 }
-/* A SUPPRIMER */
 .bouton_like::after {
   content: "\f004";
   background: linear-gradient(#ff79da, #9356dc);
@@ -284,7 +285,6 @@ h1 {
 .bouton_like:hover::after {
   opacity: 1;
 }
-/* A SUPPRIMER */
 /* Fin des règles applicables à la première section 'Restaurants' et ses composants */
 
 /* Règles applicables aux footers et leurs composants */
@@ -447,6 +447,7 @@ footer > ul > li {
   padding: 0.7em;
   flex-shrink: 0;
 }
+/* ANIMATION: réduction de la taille du plat + rognage lors du survol */
 .description_plat {
   width: 80%;
   display: flex;
@@ -477,6 +478,7 @@ h3 {
   background-color: #99e2d0;
   border-radius: 0 1em 1em 0;
 }
+/* ANIMATION: retournement de l'icone de validation */
 .coche i {
   transform: rotate(180deg);
   transition-property: transform;
